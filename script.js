@@ -26,6 +26,8 @@ addBtn.addEventListener("click", function add() {
 
   completeBtn.addEventListener("click", function (){
     toDoText.style.textDecoration = "line-through";
+    toDoText.style.textDecorationThickness = "3px";
+    toDoText.style.textDecorationColor = "#3ae23a";
   })
 
   let deleteBtn = document.createElement("button");
@@ -44,5 +46,6 @@ addBtn.addEventListener("click", function add() {
 
   toDoContainer.appendChild(toDoDiv);
 
+  toDoValue.value = "";
 
 });

@@ -6,7 +6,7 @@
 
 body{
     height: 100vh;
-    background-color: aliceblue;
+    background-color: rgb(209, 219, 230);
     font-family: sans-serif;
     display: grid;
     place-items: center;
@@ -24,10 +24,26 @@ main{
 
     border-radius: 10px;
 }
+.input-bx{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 .input-bx input,
 .input-bx button{
     height: 2rem;
     padding-inline: 1rem;
+    border-radius: 10px;
+}
+.input-bx input{
+    width: calc(100% - 6.5rem);
+    border: 1px solid gray;
+}
+.input-bx button{
+    width: 6rem;
+}
+.input-bx input::placeholder{
+    opacity: .4;
 }
 button{
     background-color: rgb(56, 133, 233);
@@ -41,7 +57,7 @@ button:not(.input button) {
 }
 hr{
     width: 100%;
-    border: 2px solid gray;
+    border: 1px solid #111;
     border-radius: 20px;
 }
 .todo-container{
@@ -71,6 +87,7 @@ hr{
     border-radius: 5px;
 }
 .complete-btn{
+    /* background-color: #3ae23a; */
     background-color: rgb(58, 226, 58);
 }
 .delete-btn{
