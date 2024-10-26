@@ -1,3 +1,4 @@
+// Targetting existing html elements
 let textInput = document.getElementById("text-input");
 let addBtn = document.getElementById("add-btn");
 let todoMainContainer = document.getElementById("todo-mainbx");
@@ -5,7 +6,7 @@ let allBtn = document.getElementById("all");
 let completedBtn = document.getElementById("completed");
 
 
-
+//Creating a function to add todo tasks
 const add = () => {
 
     let todoTask = textInput.value.trim();
@@ -24,8 +25,10 @@ const add = () => {
  
 }
 
+//Adding eventlisterner to add button
 addBtn.addEventListener("click", add);
 
+//creating all elements to be added dynamically o button click
 const create = (todoTask) => {
 
     const list = document.createElement("li");
@@ -79,7 +82,7 @@ const create = (todoTask) => {
 }
 
 
-
+//adding local storage to persist how todo even after exiting the browser.
 let toDos = [];
 const saveTodo = () => {
 
@@ -98,4 +101,5 @@ const loadTodo = () => {
 //     const todoTask = JSON.parse(localStorage.getItem("toDos"));
 //     localStorage.removeItem(toDos.)
 // }
+
 loadTodo();
